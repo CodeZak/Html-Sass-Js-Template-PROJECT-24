@@ -1,0 +1,63 @@
+@use "../config/variables" as *;
+/*=============== START SKILLS ===============*/
+.skills {
+    .container {
+        padding: 10px;
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .skills_bars {
+            .bar_box {
+                position: relative;
+                margin: 40px 30px;
+
+                h2 {
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    text-align: left;
+                    margin-bottom: 10px;
+                }
+                .bar {
+                    height: 30px;
+                    width: 100%;
+                    margin: auto;
+                    background-color: rgb(213, 213, 213);
+                    transition: 0.3s;
+
+                    .colored_bar {
+                        background-color: $main-color;
+                        height: 100%;
+                        width: 0%;
+                        transition: 0.3s;
+                        position: relative;
+                    }
+                    .tooltip {
+                        position: absolute;
+                        top: calc(-100% - 13px);
+                        right: -20px;
+                        background-color: black;
+                        border-radius: 5px;
+                        padding: 6px;
+                        color: white;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 100%;
+                            right: 50%;
+                            transform: translateX(50%);
+                            border-width: 10px;
+                            border-style: solid;
+                            border-color: rgb(0, 0, 0) transparent transparent
+                                transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*=============== END SKILLS ===============*/

@@ -1,0 +1,49 @@
+@use "../config/variables" as *;
+/*=============== START TESTIMONIALS ===============*/
+.testimonials {
+    padding: 50px 0;
+    background-color: $bg-color;
+    .main-title {
+        margin-bottom: 80px;
+    }
+    .container {
+        .box {
+            line-height: 1.6;
+            background-color: white;
+            box-shadow: $card-shadow;
+            padding: 20px;
+            margin: 25px 15px;
+            position: relative;
+            border-radius: 5px;
+
+
+            img {
+                position: absolute;
+                top: -35%;
+                right: -15px;
+                width: 95px;
+                object-fit: cover;
+                border-radius: 50%;
+                padding: 8px;
+                background-color: $bg-color;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            h3 {
+                font-size: 1rem;
+                font-weight: 400;
+                color: grey;
+            }
+            .stars {
+                i {
+                    color: rgb(236, 155, 4);
+                }
+            }
+            p {
+                color: grey;
+            }
+        }
+    }
+}
+/*=============== END TESTIMONIALS ===============*/

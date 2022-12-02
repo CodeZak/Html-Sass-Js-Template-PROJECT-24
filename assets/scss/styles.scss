@@ -1,0 +1,27 @@
+// Import of partial files
+
+@use "./base/base";
+@use "./components/animation";
+
+@use "./components/header.scss";
+@use "./components/landing.scss";
+@use "./components/article";
+@use "./components/gallery";
+@use "./components/features";
+@use "./components/testimonials";
+@use "./components/members";
+@use "./components/services";
+@use "./components/skills";
+@use "./components/how_it_works";
+@use "./components/events";
+@use "./components/pricing";
+@use "./components/videos";
+@use "./components/stats";
+@use "./components/discount";
+@use "./components/footer";
+@use "./components/darkmode";
+
+@use "./layout/layout";
+
+// always make sure to put media styling the last one
+@use "./components/media.scss";

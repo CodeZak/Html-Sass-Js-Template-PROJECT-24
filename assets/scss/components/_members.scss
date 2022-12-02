@@ -1,0 +1,84 @@
+@use "../config/variables" as *;
+/*=============== START MEMBERS ===============*/
+
+.members {
+    .container {
+        .box {
+            padding: 50px 0px 0px 0px;
+            width: 85%;
+            margin-left: auto;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            background-color: $lighteer-grey;
+            border-radius: 10px;
+            position: relative;
+            &::before {
+                content: "";
+                width: 0%;
+                height: 100%;
+                right: 0;
+                position: absolute;
+                background-color: rgba(181, 181, 181, 0.877);
+                transition: 0.3s;
+                z-index: -1;
+                top: 0;
+                border-radius:10px ;
+            }
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+                img {
+                    filter: grayscale(100%);
+                }
+
+                .content {
+                    h2 {
+                        color: grey;
+                    }
+                }
+            }
+
+            .middle_box {
+                display: flex;
+                position: relative;
+                right: 32px;
+                img {
+                    width: 90%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    transition: 0.3s;
+
+                }
+                .socials {
+                    margin: 0px 15px;
+                    width: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    i {
+                        padding: 15px 25px;
+                        transition: 0.3s;
+                        color: grey;
+                    }
+                    i:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+            .content {
+                padding: 20px;
+                h2 {
+                    color: $main-color;
+                    margin-bottom: 5px;
+                }
+                p {
+                    padding-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+/*=============== END MEMBERS ===============*/

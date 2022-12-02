@@ -1,0 +1,42 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --bg-color: #ececec;
+    --light-grey: rgb(228, 227, 227);
+    --lighter-grey: #ececec;
+    --lighteer-grey: #f1f1f1cd;
+    --transparent-grey: rgba(228, 227, 227, 0.324);
+    --transition: all ease-in-out 0.3s;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --card-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+}
+
+/* .dark-theme {
+    --main-color: #cbcbcb;
+    --main-color-alt: #dddfdd;
+    --bg-color: #201f1f;
+    --light-grey: rgb(228, 227, 227);
+    --lighter-grey: #ececec;
+    --lighteer-grey: #f1f1f1cd;
+    --transparent-grey: rgba(228, 227, 227, 0.324);
+    --transition: all ease-in-out 0.3s;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --card-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+} */
+
+$main-color: var(--main-color);
+$main-color-alt: var(--main-color-alt);
+$bg-color: var(--bg-color);
+$light-grey: var(--light-grey);
+$lighter-grey: var(--lighter-grey);
+$lighteer-grey: var(--lighteer-grey);
+$transparent-grey: var(--transparent-grey);
+$transition: var(--transition);
+$light-shadow: var(--light-shadow);
+$dark-shadow: var(--dark-shadow);
+$card-shadow: var(--card-shadow);

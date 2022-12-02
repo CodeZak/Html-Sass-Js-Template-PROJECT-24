@@ -1,0 +1,131 @@
+@use "../config/variables" as *;
+
+/*=============== START FOOTER ===============*/
+.footer {
+    min-height: 200px;
+    color: rgba(228, 225, 225, 0.754);
+    text-align: center;
+    position: relative;
+    background-color: #191919;
+    .container {
+        padding: 50px 10px;
+        position: relative;
+
+        .title_desc_socials {
+            flex: 1;
+            padding: 0px 10px;
+            h1 {
+                color: rgba(228, 225, 225, 0.969);
+            }
+            .socials {
+                a {
+                    i {
+                        color: rgba(228, 225, 225, 0.969);
+                        padding: 15px;
+                        background-color: rgba(183, 183, 183, 0.303);
+                        font-size: 1.4rem;
+                        margin-bottom: 20px;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $main-color;
+                        }
+                    }
+                }
+            }
+            p {
+                line-height: 1.8;
+                margin-bottom: 15px;
+                width: 85%;
+                margin: 0 auto;
+            }
+        }
+        .links {
+            padding: 10px;
+            flex: 1;
+            ul {
+                margin-bottom: 35px;
+                li {
+                    padding: 15px 0px;
+                    width: 100%;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.192);
+                    a {
+                        color: rgba(228, 225, 225, 0.754);
+                        transition: 0.3s;
+                        &:hover {
+                            color: rgba(155, 152, 152, 0.969);
+                            padding-left: 10px;
+                        }
+                        &::before {
+                            font-family: "Font Awesome 5 Free";
+                            content: "\F101";
+                            font-weight: 900;
+                            margin-right: 10px;
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .contact_details {
+            padding: 17px 10px;
+            flex: 1;
+            line-height: 2;
+            i {
+                font-size: 1.4rem;
+                color: $main-color;
+            }
+            .address {
+                margin-bottom: 25px;
+            }
+            .business_hours {
+                margin-bottom: 25px;
+            }
+            .phone {
+                margin-bottom: 25px;
+                i {
+                }
+                div {
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .photos {
+            padding: 22px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-start;
+            flex: 1;
+
+            img {
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+                border: 3px solid white;
+                margin: 5px;
+            }
+        }
+    }
+    .copyright {
+        h3 {
+            font-size: 1em;
+            font-weight: 400;
+            color: rgb(223, 222, 222);
+            position: relative;
+            padding: 10px;
+        }
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            top: -10px;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.192);
+        }
+    }
+}
+/*=============== END FOOTER ===============*/

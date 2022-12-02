@@ -1,0 +1,86 @@
+@use "../config/variables" as *;
+
+/*=============== START ARTICLES ===============*/
+
+// Articles Animation
+
+@keyframes movingArrow {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(10px);
+    }
+}
+.articles {
+    padding-bottom: 50px;
+    position: relative;
+    .container {
+        .article {
+            width: 95%;
+            margin: 25px auto;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: $light-shadow;
+            transition: 0.3s;
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: $dark-shadow;
+            }
+
+            &:hover {
+                .article_footer {
+                    a {
+                        span:nth-child(2) {
+                            display: inline-block;
+                            animation: movingArrow 0.6s linear infinite;
+                        }
+                    }
+                }
+            }
+            .image {
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+            .body {
+                padding: 15px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(236, 236, 236, 0.941);
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                    line-height: 2;
+                    font-size: 1.2rem;
+                    margin-bottom: 5px;
+                }
+                p {
+                    color: grey;
+                }
+            }
+            .article_footer {
+                padding: 10px;
+                margin: 0 auto;
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    color: $main-color;
+                    span:first-child {
+                        font-weight: 700;
+                    }
+                    span:nth-child(2) {
+                        margin-left: 5px;
+                    }
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    transition: 0.3s;
+                }
+                a:hover {
+                    background-color: rgba(230, 234, 235, 0.816);
+                }
+            }
+        }
+    }
+}
+/*=============== END ARTICLES ===============*/

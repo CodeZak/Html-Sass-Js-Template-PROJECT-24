@@ -1,0 +1,48 @@
+@use "../config/variables" as *;
+
+
+/* 
+
+
+@mixin light-mode {
+    $main-color: #2196f3;
+    $main-color-alt: #1787e0;
+    $bg-color: #ececec;
+    $light-grey: rgb(228, 227, 227);
+    $lighter-grey: #ececec;
+    $lighteer-grey: #f1f1f1cd;
+    $transparent-grey: rgba(228, 227, 227, 0.324);
+    $transition: all ease-in-out 0.3s;
+    $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    $card-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+}
+
+@mixin dark-mode {
+    $main-color: #f38721;
+    $main-color-alt: #e08617;
+    $bg-color: #ececec;
+    $light-grey: rgb(228, 227, 227);
+    $lighter-grey: #ececec;
+    $lighteer-grey: #f1f1f1cd;
+    $transparent-grey: rgba(228, 227, 227, 0.324);
+    $transition: all ease-in-out 0.3s;
+    $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    $card-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+}
+
+.light-mode {
+    @include light-mode;
+}
+
+.dark-mode {
+    @include dark-mode;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        @include dark-mode;
+    }
+}
+ */

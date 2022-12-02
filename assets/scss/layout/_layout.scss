@@ -1,0 +1,189 @@
+/*=============== REUSABLE CSS CLASSES ===============*/
+@use "../config/variables" as *;
+
+/*===============START MAIN-TITLE ===============*/
+
+@keyframes spread-left {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        left: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+@keyframes spread-right {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        right: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.main-title {
+    border: 2px solid black;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    margin: 30px auto;
+    margin-bottom: 50px;
+    width: fit-content;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+    &:hover {
+        color: white;
+        border: 2px solid white;
+        transition-delay: 0.5s;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        background-color: $main-color;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        z-index: -1;
+    }
+    &::before {
+        left: -30px;
+    }
+    &::after {
+        right: -30px;
+    }
+
+    &:hover {
+        &::before {
+            animation: spread-left 0.5s linear forwards;
+        }
+        &::after {
+            animation: spread-right 0.5s linear forwards;
+        }
+    }
+}
+
+//spikes
+
+.spikes {
+    position: relative;
+    background: white;
+    height: 10px;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: -0%;
+        top: 100%;
+        z-index: 10;
+        display: block;
+        height: 45px;
+        background-size: 45px 100%;
+        background-image: linear-gradient(135deg, white 25%, transparent 25%),
+            linear-gradient(225deg, white 25%, transparent 25%);
+        background-position: 0 0;
+    }
+}
+
+//curve
+
+.curved {
+    position: relative;
+    background: $bg-color;
+    height: 80px;
+    border-bottom-left-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+}
+//triangle
+
+.triangle {
+    position: relative;
+    background: $bg-color;
+    height: 20px;
+    margin-bottom: 100px;
+}
+
+.triangle::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 65px 100px 0 100px;
+    border-color: $bg-color transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+}
+
+//semicircle
+.semicircle {
+    position: relative;
+    background: $bg-color;
+    height: 40px;
+    margin-bottom: 80px;
+}
+
+.semicircle::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    z-index: 10;
+    width: 362px;
+    height: 117px;
+    border-radius: 50%;
+    background: inherit;
+    transform: translateX(-50%) translateY(31%);
+    bottom: 0px;
+}
+
+//waive
+
+.wave_container {
+    position: relative;
+    background: $bg-color;
+    height: 30px;
+  }
+  
+  .wave {
+    position: absolute;
+    height: 43px;
+    width: 100%;
+    background: $bg-color;
+    bottom: 0;
+  }
+  
+  .wave::before, .wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+  }
+  
+  .wave::before {
+    width: 55%;
+    height: 109%;
+    background-color: #fff;
+    right: -1.5%;
+    top: 60%;
+  }
+  .wave::after {
+    width: 55%;
+    height: 100%;
+    background-color: $bg-color;
+    left: -1.5%;
+    top: 40%;
+  }
+/*===============END MAIN-TITLE ===============*/

@@ -1,0 +1,68 @@
+@use "../config/variables" as *;
+
+/*=============== START HOW_IT_WORKS ===============*/
+.how_it_works {
+    background-color: $bg-color;
+    padding: 50px 0px;
+    .container {
+        img {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            padding: 0 20px;
+            margin-bottom: 40px;
+            object-fit: contain;
+        }
+        .boxes {
+            .box {
+                background-color: #f6f5f5;
+                border: 2px solid white;
+                margin: 20px 15px;
+                padding: 15px 15px 15px 0px;
+                border-radius: 6px;
+                text-align: center;
+                position: relative;
+                z-index: 0;
+                &:hover {
+                    &::before {
+                        content: "";
+                        transform: scale(1);
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(189, 187, 187, 0.148);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: 0.3s;
+                    transform: scale(0);
+                }
+                img {
+                    width: 100px;
+                    display: block;
+                    margin: 20px auto;
+                    position: relative;
+                }
+                .content {
+                    position: relative;
+                    line-height: 1.8;
+
+                    p {
+                        margin: auto;
+                        font-size: 1.1rem;
+                        color: grey;
+                        width: 95%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*=============== END HOW_IT_WORKS ===============*/

@@ -1,0 +1,152 @@
+@use "../config/variables" as *;
+/*=============== START Feature ===============*/
+.features {
+    padding: 50px 0px;
+    .container {
+        .box {
+            /* Colors */
+            &.time {
+                .image {
+                    &::before {
+                        background-color: #00968779;
+                    }
+                }
+                h2 {
+                    &::before {
+                        background-color: #009688;
+                    }
+                }
+                button {
+                    border: 3px solid #009688;
+                    color: #009688;
+                    &::before {
+                        background-color: #009688;
+                    }
+                }
+            }
+            /* **** */
+            &.passion {
+                .image {
+                    &::before {
+                        background-color: #03a8f492;
+                    }
+                }
+                h2 {
+                    &::before {
+                        background-color: #03a9f4;
+                    }
+                }
+                button {
+                    border: 3px solid #03a9f4;
+                    color: #03a9f4;
+                    &::before {
+                        background-color: #03a9f4;
+                    }
+                }
+            }
+            text-align: center;
+            border: 1px solid rgb(207, 205, 205);
+            margin: 12px;
+            line-height: 2;
+            &:hover {
+                button {
+                    color: white;
+                    &::before {
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                    }
+                }
+
+                .image {
+                    &::after {
+                        border-bottom: 170px solid rgb(255, 255, 255);
+                        border-right: 700px solid transparent;
+                        border-left: 0px solid transparent;
+                    }
+                }
+            }
+
+            .image {
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: #f43f3668;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &::after {
+                    content: "";
+                    width: 0%;
+                    height: 0%;
+                    position: absolute;
+                    border-bottom: 170px solid rgb(255, 255, 255);
+                    border-left: 700px solid transparent;
+                    border-right: 80px solid transparent;
+                    bottom: 0px;
+                    left: 0;
+                    transition: 0.3s;
+                }
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    margin-bottom: -10px;
+                }
+                position: relative;
+            }
+            h2 {
+                font-size: 2.2rem;
+                text-transform: capitalize;
+                margin: 15px 0px;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 90px;
+                    height: 4px;
+                    background-color: #f44036;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            p {
+                font-size: 1.2rem;
+                color: grey;
+                line-height: 1.8;
+                max-width: 80%;
+                margin: 10px auto 20px auto;
+                margin-top: 25px;
+            }
+            button {
+                font-weight: 700;
+                font-size: 1.3rem;
+                padding: 10px 30px;
+                background-color: transparent;
+                border: 3px solid #f44036;
+                color: #f44036;
+                border-radius: 5px;
+                margin: 15px 0px 30px 0px;
+                position: relative;
+                transition: 0.3s;
+                cursor: pointer;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    height: 100%;
+                    background-color: #f44036;
+                    top: 0;
+                    left: 0;
+                    transition: 0.3s;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+/*=============== END Feature ===============*/

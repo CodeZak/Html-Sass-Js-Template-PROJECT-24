@@ -1,0 +1,99 @@
+@use "../config/variables" as *;
+
+/*=============== START EVENTS ===============*/
+
+.events {
+    padding: 50px 0;
+    position: relative;
+
+    .container {
+        img {
+            display: none;
+        }
+        .content {
+            text-align: center;
+
+            .timer {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 40px;
+                flex-wrap: wrap;
+                gap: 10px;
+                .timer_box {
+                    margin-left: 10px;
+                    border-radius: 5px;
+                    border: 1px solid rgb(203, 202, 202);
+                    transition: 0.3s;
+                    &:hover {
+                        border: 1px solid $main-color;
+                        h2 {
+                            border-bottom: 1px solid $main-color;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 2.5rem;
+                        padding: 15px;
+                        color: $main-color;
+                        border-bottom: 1px solid rgb(203, 202, 202);
+                        width: 100%;
+                        transition: 0.3s;
+                    }
+                    div {
+                        padding: 10px;
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 1.7rem;
+                margin-bottom: 0px;
+            }
+            p {
+                line-height: 1.8;
+                color: grey;
+                margin: auto;
+                font-size: 1.1rem;
+                max-width: 90%;
+                margin-bottom: 40px;
+            }
+        }
+        .subscription {
+            margin-bottom: 40px;
+            form {
+                margin: auto;
+                max-width: 95%;
+                padding: 20px;
+                background-color: rgba(238, 238, 238, 0.885);
+                input {
+                    width: 100%;
+                    padding: 18px;
+                    margin-bottom: 15px;
+                    border: 1px solid rgb(209, 204, 204);
+                }
+                input:active,
+                input:focus,
+                input:hover {
+                    outline: none;
+                }
+
+                button {
+                    padding: 15px;
+                    width: 100%;
+                    background-color: $main-color;
+                    border: none;
+                    color: white;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+                button:hover {
+                    background-color: rgb(37, 139, 208);
+                }
+            }
+        }
+    }
+}
+
+/*=============== END EVENTS ===============*/

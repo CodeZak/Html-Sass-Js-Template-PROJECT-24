@@ -1,0 +1,145 @@
+@use "../config/variables" as *;
+
+/*=============== START HEADER ===============*/
+
+.header {
+    width: 100%;
+    .container {
+        width: 95vw;
+    }
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 5px 10px 1px rgba(231, 228, 228, 0.782);
+
+    .logo {
+        font-size: 1.2rem;
+        padding: 15px;
+        display: block;
+        margin: auto;
+        font-weight: 700;
+        color: $main_color;
+        width: fit-content;
+    }
+
+    .nav_wrapper {
+        .nav {
+            z-index: 100;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            > li {
+                position: relative;
+                &::before {
+                    content: "";
+                    height: 5px;
+                    width: 0%;
+                    position: absolute;
+                    background-color: $main_color;
+                    top: 0;
+                    left: 0;
+                    transition: 0.3s;
+                }
+
+                &:last-of-type:hover {
+                    + .mega_menu {
+                        display: block;
+                        animation: mega-anime 0.2s;
+                        @keyframes mega-anime {
+                            0% {
+                                opacity: 0;
+                                transform: translateY(50px);
+                            }
+                            100% {
+                                opacity: 1;
+                                transform: translateY(0px);
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+                a {
+                    display: block;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    color: black;
+                    padding: 10px 5px;
+                    transition: 0.3s;
+                    &:hover {
+                        background-color: rgba(242, 240, 240, 0.552);
+                        color: $main_color;
+                    }
+                    .fa-caret-down {
+                        margin-left: 3px;
+                    }
+                }
+            }
+            .menuButton-smallScreen {
+                display: block;
+            }
+            .menuButton-largeScreen {
+                display: none;
+            }
+            .mega_menu {
+                width: 100vw;
+                position: absolute;
+                top: 37.5px;
+                display: none;
+                border-bottom: 2px solid $main-color;
+                &:hover {
+                    display: block;
+                }
+
+                .mega_image {
+                    display: none;
+                }
+                .mega_links {
+                    background-color: white;
+                    text-align: left;
+
+                    li {
+                        cursor: pointer;
+                        position: relative;
+                        a {
+                            display: block;
+                            padding: 18px;
+                            border-bottom: 1px solid $light-grey;
+                            color: $main-color;
+                            font-weight: 700;
+                            text-transform: capitalize;
+                            position: relative;
+                            i {
+                                margin: 0px 10px;
+                            }
+                        }
+                        &::before {
+                            content: "";
+                            background-color: $transparent-grey;
+                            position: absolute;
+                            width: 0%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            transition: $transition;
+                        }
+                        &:hover {
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .mega_menu.show {
+                display: block;
+            }
+        }
+    }
+}
+
+/*=============== END HEADER ===============*/

@@ -1,0 +1,89 @@
+@use "../config/variables" as *;
+
+/*=============== START DISCOUNT ===============*/
+.discount {
+    text-align: center;
+    .offer {
+        position: relative;
+        color: white;
+        background-image: url("../img/discount-background1.jpg");
+        h2 {
+            font-size: 2.4rem;
+            padding: 35px 0px;
+        }
+        p {
+            line-height: 1.7;
+            max-width: 90%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        img {
+            width: 280px;
+        }
+        z-index: 0;
+        &::before {
+            content: "";
+            background-color: $main-color;
+            opacity: 0.98;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    .request {
+        h2 {
+            font-size: 2.4rem;
+            padding: 35px 0px;
+        }
+        form {
+            .form_control {
+                max-width:  350px;
+                margin: 0 auto;
+                padding: 0 10px;
+                
+                input,
+                textarea {
+                    border: none;
+                    border-bottom: 1px rgb(189, 189, 189) solid;
+                    padding: 15px;
+                    width: 100%;
+                    margin: 8px auto;
+                    background-color: rgba(236, 236, 236, 0.302);
+                }
+                textarea {
+                    resize: none;
+                    margin-bottom: 15px;
+                }
+                input,
+                textarea:active,
+                input,
+                textarea:focus,
+                input,
+                textarea:hover {
+                    outline: none;
+                }
+            }
+            button {
+                border: none;
+                width: 150px;
+                padding: 15px;
+                color: white;
+                background-color: $main-color;
+                transition: 0.3s;
+                font-size: 1.3rem;
+                cursor: pointer;
+                margin-bottom: 30px;
+
+            }
+            button:hover {
+                background-color: rgb(19, 130, 203);
+            }
+        }
+    }
+}
+/*=============== END DISCOUNT ===============*/

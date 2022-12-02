@@ -1,0 +1,75 @@
+@use "../config/variables" as *;
+
+.services {
+    background-color: $bg-color;
+    padding: 50px 0;
+    .container {
+        .box {
+            background-color: white;
+            width: 95%;
+            box-shadow: $dark-shadow;
+            transition: 0.3s;
+            margin: 40px auto;
+            position: relative;
+            &::before {
+                content: "";
+                width: 0%;
+                height: 3px;
+                background-color: $main-color;
+                position: absolute;
+                top: -3px;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: 0.3s;
+            }
+            &:hover {
+                transform: translateY(-10px);
+                &::before {
+                    width: 100%;
+                }
+            }
+
+            .content {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 35px;
+                i {
+                    color: rgb(213, 212, 212);
+                    margin-bottom: 16px;
+                }
+                h2 {
+                    color: $main-color;
+                    font-size: 1.6rem;
+                }
+            }
+            .details {
+                background: linear-gradient(
+                    135deg,
+                    $main-color 13%,
+                    $light-grey 13%,
+                    $light-grey 18%,
+                    rgba(232, 232, 232, 0.33) 18%,
+                    rgba(232, 232, 232, 0.33) 100%
+                );
+                background-size: 1000px;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 15px 15px 30px;
+                color: $main-color;
+                h2 {
+                    font-size: 2rem;
+                    color: white;
+                }
+
+                a {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
