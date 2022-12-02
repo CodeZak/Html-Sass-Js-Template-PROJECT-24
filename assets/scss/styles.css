@@ -1940,7 +1940,7 @@ a {
 .wave::after {
     width: 55%;
     height: 100%;
-    background-color: $bg-color;
+    background-color: var(--bg-color);
     left: -3%;
     top: 40%;
 }
