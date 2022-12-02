@@ -1930,22 +1930,21 @@ a {
   position: absolute;
   border-radius: 100% 50%;
 }
-
 .wave::before {
-  width: 55%;
-  height: 109%;
-  background-color: #fff;
-  right: -1.5%;
-  top: 60%;
+    width: 55%;
+    height: 109%;
+    background-color: white;
+    right: 0%;
+    top: 60%;
+}
+.wave::after {
+    width: 55%;
+    height: 100%;
+    background-color: $bg-color;
+    left: -3%;
+    top: 40%;
 }
 
-.wave::after {
-  width: 55%;
-  height: 100%;
-  background-color: var(--bg-color);
-  left: -1.5%;
-  top: 40%;
-}
 
 /*===============END MAIN-TITLE ===============*/
 /* very small  560px*/
